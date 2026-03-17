@@ -15,7 +15,10 @@ Projeto Focado na criação de Pipelines ETL para a verificação de cancelament
 - Criação de Data Bases e tabelas utilizando **SQL**
 - Construção de PipeLines de dados **PYTHON**
 - Transformação e tratamento de dados **limpeza, feature engineering**
-- Processo Automatizado Utilizando **Airflow**
+
+> ⚡ O pipeline foi projetado para execução automatizada com Apache Airflow, 
+> mas os resultados apresentados foram gerados localmente com Python puro.
+
 
 **Em breve:**  **migração para a nuvem (AWS/GCP)**, tornando o pipeline escalável e pronto para produção.
 
@@ -29,8 +32,15 @@ Projeto Focado na criação de Pipelines ETL para a verificação de cancelament
 
 
 
-## requerimentos 
+## Requerimentos 
 - **pandas**
 - **pyodbc**
 - **apache-airflow**
 
+## Resultados da análise
+
+Após a execução dos pipelines, os 7.043 clientes analisados revelaram que:
+
+- O tempo médio de relacionamento dos clientes é de **32.4 meses**
+- O gasto mensal médio por contrato é de **R$ 64,76**
+- A média de serviços contratados por cliente é de **3.4**
