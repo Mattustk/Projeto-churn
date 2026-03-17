@@ -22,4 +22,13 @@ Possivelmente no futuro terá sistemas mais complexos como **airflow** para auto
 - **PYTHON** - Criações de Pipelines ETL 
 - **PANDAS** - Filtragem e Tratamento de Dados
 - **pyODBC** - Conexão Python com SQL Server
+- **AIRFLOW** - Automatização do processo de filtragem, tratamento e criação de Pipelines
+- **DAG** - Conexão com o Script no VScode
+
+
+
+## requerimentos 
+- **pandas**
+- **pyodbc**
+- **apache-airflow**
 
