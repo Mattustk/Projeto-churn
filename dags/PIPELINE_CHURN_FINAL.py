@@ -26,7 +26,7 @@ def executar_pipeline():
     cancelaram = df[df['Churn'] == 'Yes']
     ficaram = df[df['Churn'] == 'No']
     
-    output_dir = '/opt/airflow/output'
+    output_dir = '/opt/airflow/dags/output'
     os.makedirs(output_dir, exist_ok=True)
     
     df.to_csv(f'{output_dir}/churn_completo.csv', index=False)
