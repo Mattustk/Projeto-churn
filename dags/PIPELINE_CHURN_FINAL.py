@@ -17,9 +17,9 @@ def executar_pipeline():
     
     df.dropna(subset=['customerID', 'Churn'], inplace=True)
     
-    servicos = ['PhoneService', 'MultipleLines', 'OnlineSecurity', 
+    servicos = ['CustomerID','PhoneService', 'MultipleLines', 'OnlineSecurity', 
                 'OnlineBackup', 'DeviceProtection', 'TechSupport', 
-                'StreamingTV', 'StreamingMovies']
+                'StreamingTV', 'StreamingMovies','Churn']
     df['TotalServices'] = (df[servicos] == 'Yes').sum(axis=1)
     df['AvgMonthlySpend'] = df['MonthlyCharges'] / df['tenure'].replace(0, 1)
     
