@@ -1,34 +1,14 @@
-![AWS BUCKET S3](https://img.shields.io/badge/AWS%20S3-yellow)
-![AWS GLUE](https://img.shields.io/badge/AWS%20Glue-red)
-![WORKFLOW](https://img.shields.io/badge/WORKFL0W-green)
+# 📊 AWS Data Pipeline: Churn Analytics
+![AWS Glue](https://img.shields.io/badge/AWS-Glue-F59B17?style=flat&logo=amazonaws)
+![S3](https://img.shields.io/badge/Amazon-S3-569A31?style=flat&logo=amazons3)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python)
+![Status](https://img.shields.io/badge/Status-Full%20Green-green)
 
+## ⛓️ Orquestração do Workflow
+![Pipeline Success](./images/workflow_success.png)
+*Pipeline 100% automatizado: o Job Gold só dispara após o sucesso da camada Silver.*
 
-
-# 📊 Pipeline de Dados End-to-End: Churn Analytics (AWS Glue)
-
-Projeto de Engenharia de Dados focado na automação de um pipeline de ETL utilizando a **Arquitetura Medalhão** (Bronze, Silver e Gold) dentro do ecossistema AWS.
-
-## 🏗️ Arquitetura do Projeto
-O pipeline foi desenhado para ser **orientado a eventos** e totalmente orquestrado via **AWS Glue Workflows**.
-
-
-
-### 📂 Camadas de Dados (S3):
-* **Bronze:** Armazenamento dos dados brutos (Raw Data) em formato CSV.
-* **Silver:** Dados limpos, tipados e tratados (Nulos removidos e normalização de colunas) salvos em formato **Parquet** para otimização de custo e performance.
-* **Gold:** Camada de negócio com agregações e métricas prontas para consumo em Dashboards (Power BI/QuickSight).
-
-## 🛠️ Tecnologias Utilizadas
-* **Python 3.x**
-* **AWS Glue** (Jobs Python Shell)
-* **AWS SDK (Boto3)** & **AWS Wrangler**
-* **Amazon S3** (Data Lake)
-* **AWS Glue Workflows** (Orquestração)
-
-## 🚀 Diferenciais Técnicos
-* **Orquestração Automática:** Implementação de triggers de dependência (o Job Gold só inicia após o sucesso do Job Silver).
-* **Otimização de Custos:** Conversão de CSV para Parquet, reduzindo o volume de dados lidos no S3 e acelerando consultas via Athena.
-* **Resiliência:** Tratamento de erros de esquema (KeyErrors) e integridade de colunas durante o fluxo.
-
----
-*Desenvolvido por um aspirante a Engenheiro de Dados focado em Cloud e Automação.*
+## 🛠️ Transformações Principais (Silver Layer)
+* **Tratamento de Tipagem:** Conversão de `TotalCharges` para numérico e remoção de valores nulos.
+* **Feature Engineering:** Criação da coluna `Qtd_Servicos` (contagem de serviços ativos) e cálculo da `TotalCharges_Pipeline` (`MonthlyCharges` * `tenure`).
+* **Otimização:** Dados salvos em formato **Parquet** para reduzir custos de armazenamento e consulta.
