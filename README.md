@@ -1,6 +1,6 @@
-![AWS BUCKET S3](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
-![AWS GLUE](https://img.shields.io/badge/SQL%20Server-2019-red)
-![WORKFLOW](https://img.shields.io/badge/Status-Conclu%C3%ADdo-green)
+![AWS BUCKET S3](https://img.shields.io/badge/AWS%20S3-Dashboard-yellow)
+![AWS GLUE](https://img.shields.io/badge/AWS%20Glue-2019-red)
+![WORKFLOW](https://img.shields.io/badge/WORKFL0W%C3%ADdo-green)
 
 
 
