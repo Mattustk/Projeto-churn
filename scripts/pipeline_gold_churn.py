@@ -84,4 +84,4 @@ for nome, df in tabelas_gold.items():
         mode="overwrite",
         boto3_session=session
     )
-    print(f"Sucesso! A tabela {nome} foi salva na pasta Gold.")
+   
