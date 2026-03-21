@@ -1,37 +1,37 @@
-# 🏗️ Projeto de Engenharia de Dados: Pipeline Cloud de Análise de Churn
+# 🚀 CHURN ANALYTICS: AWS DATA LAKEHOUSE
+> **Status do Projeto:** 🟢 SUCCEEDED (Operacional no AWS Glue)
 
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![AWS S3](https://img.shields.io/badge/AWS-S3-orange)
-![AWS Wrangler](https://img.shields.io/badge/AWS-Wrangler-blue)
-![Parquet](https://img.shields.io/badge/Format-Parquet-green)
-![Status](https://img.shields.io/badge/Status-Produção-success)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![S3](https://img.shields.io/badge/Amazon_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white)
 
+---
 
-  ## 🎯 Sobre o Projeto 
-Projeto focado na criação de Pipelines ETL para análise de cancelamento de clientes (Churn). O objetivo principal é demonstrar a transição de um ambiente local para uma **arquitetura moderna em Nuvem (Cloud)**.
+## 🏗️ ARQUITETURA MEDALLION (SERVERLESS)
+O pipeline foi construído para ser 100% **cloud-native**, eliminando a necessidade de servidores fixos e otimizando custos.
 
-- **Camadas de Dados:** Organização em camadas Bronze e Silver no **Amazon S3**.
-- **Data Quality:** Limpeza, tratamento de nulos e remoção de duplicados com **Python/Pandas**.
-- **Performance:** Armazenamento otimizado em **Apache Parquet**.
+* **🟠 BRONZE:** Dados brutos estacionados no S3.
+* **⚪ SILVER:** Processamento via Pandas e conversão para **Parquet** (Performance Máxima).
+* **🟡 GOLD:** Tabelas analíticas agregadas prontas para o business.
 
-> 💡 **Nota:** Este projeto foi desenvolvido de forma modular. Embora tenha iniciado com estudos em Airflow/Docker, a solução final foi otimizada para execução Serverless na AWS, garantindo agilidade mesmo em períodos de alta demanda acadêmica na faculdade.
+## 🛠️ O CORAÇÃO DO PROJETO: AWS GLUE JOBS
+Diferente de scripts locais, este projeto roda no **AWS Glue (Python Shell)**. 
+- **Orquestração:** Automatizada via Triggers.
+- **Data Catalog:** Schemas mapeados automaticamente por Crawlers.
+- **Consultas:** Disponíveis via **Amazon Athena** usando SQL puro.
 
-## 🛠️ Tecnologias Utilizadas
-- **AWS S3** - Armazenamento escalável das camadas Bronze e Silver.
-- **PYTHON** - Construção do Pipeline de processamento.
-- **AWS Data Wrangler** - Integração de alta performance entre Python e Cloud.
-- **PANDAS** - Engenharia de Atributos (Feature Engineering).
-- **PARQUET** - Formato de arquivo colunar para redução de custos e ganho de velocidade.
+## 📈 INSIGHTS GERADOS
+O pipeline entrega tabelas prontas para responder:
+- Taxa de Churn por tipo de contrato.
+- Faturamento total por método de pagamento.
+- Ticket médio de clientes com perfil VIP.
 
-## ⚙️ Requerimentos 
-- `boto3`
-- `awswrangler`
-- `pandas`
+---
+### 🚀 COMO REPRODUZIR
+1. Suba o arquivo bruto para o bucket S3.
+2. Configure a IAM Role com permissões de `S3FullAccess` e `GlueServiceRole`.
+3. Rode o Job no Glue Studio.
+4. Consulte os resultados no Athena.
 
-## Resultados da análise
-
-Após a execução dos pipelines, os 7.043 clientes analisados revelaram que:
-
-- O tempo médio de relacionamento dos clientes é de **32.4 meses**
-- O gasto mensal médio por contrato é de **R$ 64,76**
-- A média de serviços contratados por cliente é de **3.4**
+**Desenvolvido por um Engenheiro de Dados que não aceita menos que o Succeeded verde.** 🍻
