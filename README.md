@@ -4,9 +4,11 @@
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python)
 ![Status](https://img.shields.io/badge/Status-Full%20Green-green)
 
-## ⛓️ Orquestração do Workflow
-![Pipeline Success](./images/workflow_success.png)
-*Pipeline 100% automatizado: o Job Gold só dispara após o sucesso da camada Silver.*
+## ⛓️ Orquestração e Fluxo de Dados (AWS Glue)
+O projeto utiliza **AWS Glue Workflows** para garantir a integridade entre as camadas. O processamento da camada Gold é dependente do sucesso da Silver, automatizando todo o pipeline de ponta a ponta.
+
+![Status do Workflow](./Images/WorkFlow_Sucess.png) 
+*Status: Succeeded (Full Green)*
 
 ## 🛠️ Transformações Principais (Silver Layer)
 * **Tratamento de Tipagem:** Conversão de `TotalCharges` para numérico e remoção de valores nulos.
