@@ -1,3 +1,9 @@
+![AWS BUCKET S3](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
+![AWS GLUE](https://img.shields.io/badge/SQL%20Server-2019-red)
+![WORKFLOW](https://img.shields.io/badge/Status-Conclu%C3%ADdo-green)
+
+
+
 # 📊 Pipeline de Dados End-to-End: Churn Analytics (AWS Glue)
 
 Projeto de Engenharia de Dados focado na automação de um pipeline de ETL utilizando a **Arquitetura Medalhão** (Bronze, Silver e Gold) dentro do ecossistema AWS.
@@ -5,7 +11,7 @@ Projeto de Engenharia de Dados focado na automação de um pipeline de ETL utili
 ## 🏗️ Arquitetura do Projeto
 O pipeline foi desenhado para ser **orientado a eventos** e totalmente orquestrado via **AWS Glue Workflows**.
 
-![Workflow do Projeto](./images/workflow_success.png)
+
 
 ### 📂 Camadas de Dados (S3):
 * **Bronze:** Armazenamento dos dados brutos (Raw Data) em formato CSV.
