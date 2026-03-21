@@ -1,26 +1,28 @@
-# 🚀 CHURN ANALYTICS: AWS DATA LAKEHOUSE
-> **Status:** 🟢 SUCCEEDED (Operacional no AWS Glue)
+# 📊 Pipeline de Dados End-to-End: Churn Analytics (AWS Glue)
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+Projeto de Engenharia de Dados focado na automação de um pipeline de ETL utilizando a **Arquitetura Medalhão** (Bronze, Silver e Gold) dentro do ecossistema AWS.
 
-## 🏗️ ARQUITETURA MEDALLION
-O pipeline foi construído para ser 100% **cloud-native** (Serverless).
+## 🏗️ Arquitetura do Projeto
+O pipeline foi desenhado para ser **orientado a eventos** e totalmente orquestrado via **AWS Glue Workflows**.
 
-* **🟠 BRONZE:** Dados brutos no S3.
-* **⚪ SILVER:** Limpeza e conversão para **Parquet** via Pandas.
-* **🟡 GOLD:** Tabelas analíticas agregadas prontas para o business.
+![Workflow do Projeto](./images/workflow_success.png)
 
-## 🛠️ TECNOLOGIAS UTILIZADAS
-- **AWS Glue Jobs:** Processamento via Python Shell.
-- **Amazon S3:** Armazenamento distribuído.
-- **AWS Glue Crawler:** Catalogação automática dos metadados.
-- **Python Libraries:** `awswrangler`, `pandas`, `boto3`.
+### 📂 Camadas de Dados (S3):
+* **Bronze:** Armazenamento dos dados brutos (Raw Data) em formato CSV.
+* **Silver:** Dados limpos, tipados e tratados (Nulos removidos e normalização de colunas) salvos em formato **Parquet** para otimização de custo e performance.
+* **Gold:** Camada de negócio com agregações e métricas prontas para consumo em Dashboards (Power BI/QuickSight).
 
-## 📂 ENTREGAS (DATA CATALOG)
-As seguintes tabelas são geradas e atualizadas pelo Job:
-- `analise_internet` | `analise_pagamento` | `analise_fidelidade` | `analise_perfil_vip` | `analise_streaming`
+## 🛠️ Tecnologias Utilizadas
+* **Python 3.x**
+* **AWS Glue** (Jobs Python Shell)
+* **AWS SDK (Boto3)** & **AWS Wrangler**
+* **Amazon S3** (Data Lake)
+* **AWS Glue Workflows** (Orquestração)
+
+## 🚀 Diferenciais Técnicos
+* **Orquestração Automática:** Implementação de triggers de dependência (o Job Gold só inicia após o sucesso do Job Silver).
+* **Otimização de Custos:** Conversão de CSV para Parquet, reduzindo o volume de dados lidos no S3 e acelerando consultas via Athena.
+* **Resiliência:** Tratamento de erros de esquema (KeyErrors) e integridade de colunas durante o fluxo.
 
 ---
-**Projeto desenvolvido para demonstrar automação de ETL na nuvem AWS.**
+*Desenvolvido por um aspirante a Engenheiro de Dados focado em Cloud e Automação.*
