@@ -14,3 +14,13 @@ O projeto utiliza **AWS Glue Workflows** para garantir a integridade entre as ca
 * **Tratamento de Tipagem:** Conversão de `TotalCharges` para numérico e remoção de valores nulos.
 * **Feature Engineering:** Criação da coluna `Qtd_Servicos` (contagem de serviços ativos) e cálculo da `TotalCharges_Pipeline` (`MonthlyCharges` * `tenure`).
 * **Otimização:** Dados salvos em formato **Parquet** para reduzir custos de armazenamento e consulta.
+
+## ⚙ Técnologias Utilizaddas
+
+* **Linguagem & Processamento:**  (ETL & Limpeza)
+
+* **Armazenamento (Data Lake):**  Amazon S3 (Estrutura Bronze/Silver/Gold)
+
+* **Governança & Catálogo:** AWS Glue Crawler (Mapeamento automático de Schema)
+
+* **Orquestração:** ETL Jobs e lógica de Workflow para automação do pipeline.
