@@ -1,7 +1,4 @@
-AWS
+## Bibliotecas
+Boto 3 
 Pandas
-Bucket S3
-AWS glue
-Crawler
-ETL Jobs
-Workflow
+AWSANGlER
