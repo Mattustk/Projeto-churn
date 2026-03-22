@@ -1,2 +1,7 @@
-pandas
-pyodbc
+AWS
+Pandas
+Bucket S3
+AWS glue
+Crawler
+ETL Jobs
+Workflow
