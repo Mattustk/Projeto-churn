@@ -15,7 +15,7 @@ O projeto utiliza **AWS Glue Workflows** para garantir a integridade entre as ca
 * **Feature Engineering:** Criação da coluna `Qtd_Servicos` (contagem de serviços ativos) e cálculo da `TotalCharges_Pipeline` (`MonthlyCharges` * `tenure`).
 * **Otimização:** Dados salvos em formato **Parquet** para reduzir custos de armazenamento e consulta.
 
-## ⚙ Técnologias Utilizaddas
+## ⚙ Tecnologias Utilizaddas
 
 * **Linguagem & Processamento:**  (ETL & Limpeza)
 
