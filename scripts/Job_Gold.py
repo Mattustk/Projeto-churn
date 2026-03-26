@@ -1,9 +1,6 @@
-import boto3
+#Importação de Blibiotecas
 import awswrangler as wr
 import pandas as pd
-
-# Conecta na AWS
-session = boto3.Session(region_name="us-east-1") 
 
 # Pega os dados que você já limpou na pasta Silver
 df_silver = pd.read_parquet('s3://projetochurnaws/Silver/churn_refinado.parquet')
