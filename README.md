@@ -15,15 +15,13 @@ O projeto utiliza **AWS Glue Workflows** para garantir a integridade entre as ca
 * **Feature Engineering:** Criação da coluna `Qtd_Servicos` (contagem de serviços ativos) e cálculo da `TotalCharges_Pipeline` (`MonthlyCharges` * `tenure`).
 * **Otimização:** Dados salvos em formato **Parquet** para reduzir custos de armazenamento e consulta.
 
-## ⚙ Tecnologias Utilizaddas
+## ⚙ Tecnologias Utilizadas
 
-* **Linguagem & Processamento:**  (ETL & Limpeza)
-
-* **Armazenamento (Data Lake):**  Amazon S3 (Estrutura Bronze/Silver/Gold)
-
+* **Linguagem & Processamento:** Python (PySpark) para ETL e limpeza
+* **Armazenamento (Data Lake):** Amazon S3 (Estrutura Bronze/Silver/Gold)
 * **Governança & Catálogo:** AWS Glue Crawler (Mapeamento automático de Schema)
+* **Orquestração:** AWS Glue Workflows para automação do pipeline
 
-* **Orquestração:** ETL Jobs e lógica de Workflow para automação do pipeline.
-
-## Os Insights e o Dashboards estão documentados nesse repositório 
-* **https://github.com/Mattustk/Projeto-Churn-Insights**
+## 📈 Insights e Dashboards
+Os insights e dashboards estão documentados neste repositório:  
+[🔗 Projeto Churn Insights](https://github.com/Mattustk/Projeto-Churn-Insights)
