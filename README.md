@@ -24,3 +24,6 @@ O projeto utiliza **AWS Glue Workflows** para garantir a integridade entre as ca
 * **Governança & Catálogo:** AWS Glue Crawler (Mapeamento automático de Schema)
 
 * **Orquestração:** ETL Jobs e lógica de Workflow para automação do pipeline.
+
+## Os Insights e o Dashboards estão documentados nesse repositório 
+* **https://github.com/Mattustk/Projeto-Churn-Insights**
