@@ -3,8 +3,8 @@ import awswrangler as wr
 import pandas as pd
 
 #Salvando o caminho do bucket S3 em path
-path_bronze = 's3://projetochurnaws/Bronze/WA_Fn-UseC_-Telco-Customer-Churn.csv'
-path_silver = 's3://projetochurnaws/Silver/churn_refinado.parquet'
+path_bronze = 's3://SEU-BUCKET/Bronze/WA_Fn-UseC_-Telco-Customer-Churn.csv'
+path_silver = 's3://SEU-BUCKET/Silver/churn_refinado.parquet'
 
 #Criação do dataFrame usando a camada Bronze do S3
 df = wr.s3.read_csv(path=path_bronze)
