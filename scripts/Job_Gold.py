@@ -3,7 +3,7 @@ import awswrangler as wr
 import pandas as pd
 
 # Pega os dados que você já limpou na pasta Silver
-df_silver = pd.read_parquet('s3://projetochurnaws/Silver/churn_refinado.parquet')
+df_silver = pd.read_parquet('s3://SEU-BUCKET/Silver/churn_refinado.parquet')
 
 # --- 1. TABELA DE CONTRATOS ---
 # Aqui eu vejo se o tipo de contrato (mensal ou anual) faz o cliente sair mais
@@ -73,7 +73,7 @@ tabelas_gold = {
 }
 
 for nome, df in tabelas_gold.items():
-    path = f"s3://projetochurnaws/Gold/{nome}.parquet"
+    path = f"s3://SEUBUCKET/Gold/{nome}.parquet"
     wr.s3.to_parquet(
         df=df,
         path=path,
