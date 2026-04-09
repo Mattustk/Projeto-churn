@@ -4,8 +4,8 @@ import os
 
 conn_str = (
     'DRIVER={ODBC Driver 17 for SQL Server};'
-    'SERVER=DESKTOP-OKQHC3S;'
-    'DATABASE=TelcoCustomerChurn;'
+    'SERVER=_________;'
+    'DATABASE=________;'
     'Trusted_Connection=yes;'
 )
 
